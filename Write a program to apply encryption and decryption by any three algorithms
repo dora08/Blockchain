@@ -1,0 +1,47 @@
+import pyaes
+from pyDes import *
+import rsa
+from cryptography.fernet import Fernet
+
+def AES():
+    aes = pyaes.AESModeOfOperationCTR(b'DESCRYPTDESCRYPT')
+    plaintext = input("Enter plain text for AES: ")
+    ciphertext = aes.encrypt(plaintext)
+    print("Encrypted:", ciphertext)
+    aes = pyaes.AESModeOfOperationCTR(b'DESCRYPTDESCRYPT')
+    decrypted_text = aes.decrypt(ciphertext)
+    print("Decrypted:", decrypted_text.decode('utf-8'))
+
+def DES():
+    data = input("Enter plain text for DES: ")
+    k = des("DESCRYPT", CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5) 
+    encrypted_data = k.encrypt(data)
+    print("Encrypted:", encrypted_data)
+    decrypted_data = k.decrypt(encrypted_data)
+    print("Decrypted:", decrypted_data)
+
+
+
+def RSA():
+    (pubkey, privkey) = rsa.newkeys(512)
+    message = input("Enter plain text for RSA: ").encode('utf8')
+    crypto = rsa.encrypt(message, pubkey)
+    print("Encrypted:", crypto)
+    decrypted_message = rsa.decrypt(crypto, privkey)
+    print("Decrypted:", decrypted_message.decode('utf8'))
+
+def main():
+    cryptography_choice = input("Enter the type of cryptography (AES, DES, RSA): ").upper()
+
+    if cryptography_choice == 'AES':
+        AES()
+    elif cryptography_choice == 'DES':
+        DES()
+    
+    elif cryptography_choice == 'RSA':
+        RSA()
+    else:
+        print("Invalid choice. Please enter AES, DES, or RSA.")
+
+if __name__ == "__main__":
+    main()
