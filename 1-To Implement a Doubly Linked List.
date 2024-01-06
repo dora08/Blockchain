@@ -1,0 +1,103 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def InsertToEmpty(self, data):
+        if self.head is None:
+            new_node = Node(data)
+            self.head = new_node
+        else:
+            print("The list is empty.")
+    def InsertToEnd(self, data):
+        if self.head is None:
+            new_node = Node(data)
+            self.head = new_node
+            return
+        n = self.head
+        while n.next is not None:
+            n = n.next
+        new_node = Node(data)
+        n.next = new_node
+        new_node.prev = n
+
+    def Insert(self, index, data):
+        new_node = Node(data)
+        n = self.head
+        if index == 0:
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
+            return
+        for i in range(index-1):
+            n = n.next
+            if n is None:
+                raise IndexError("Index out of range")
+        new_node.prev = n
+        new_node.next = n.next
+
+        if n.next:
+            n.next.prev = new_node
+        n.next = new_node
+    
+    def Delete(self, index):
+        n = self.head
+        if index == 0:
+            self.head = n.next
+            n.next.prev = None
+            n.next = None
+            return
+        for i in range(index-1):
+            n = n.next
+            if n is None:
+                raise IndexError("Index out of range")
+        if n.next:
+            n.next.prev = n.prev
+        if n.prev:
+            n.prev.next = n.next
+        n.next = None
+        n.prev = None
+    def Display(self):
+        if self.head is None:
+            print("The List is Empty")
+            return
+        else:
+            n = self.head
+            while n is not None:
+                print("Element is: ", n.data)
+                n = n.next
+        print("\n")
+
+    def Search(self,value):
+        n = self.head
+        while n is not None:
+            if n.data == value:
+                print("True")
+                return
+            n = n.next
+        print("False")
+        return None
+            
+
+DLL = DoublyLinkedList()
+print("Inserting to Empty List")
+DLL.InsertToEmpty(10)
+DLL.InsertToEnd(20)
+DLL.InsertToEnd(30)
+DLL.InsertToEnd(40)
+DLL.InsertToEnd(50)
+DLL.InsertToEnd(60)
+print("The Doubly Linked List is: ")
+DLL.Display()
+print("Deleting an Element")
+DLL.Delete(4)
+DLL.Display()
+DLL.Insert(3, 69)
+DLL.Display()
+print("Searching an Element")
+DLL.Search(69)
