@@ -1,0 +1,23 @@
+import hashlib
+
+flag = True
+while (flag):
+    text = input("Enter data to compute hash: ").encode()
+    print("1: MD5")
+    print("2: SHA-1")
+    print("3: SHA-224")
+    
+    choice = int(input("Select Algorithm: "))
+    if choice == 1:
+        hashvalue = hashlib.md5(text).hexdigest()
+        print("Hash Value using MD5 is: ", hashvalue)
+    elif choice == 2:
+        hashvalue = hashlib.sha1(text).hexdigest()
+        print("Hash Value using SHA-1 is: ", hashvalue)
+    else:
+        hashvalue = hashlib.sha224(text).hexdigest()
+        print("Hash Value using SHA-224 is: ", hashvalue)
+
+    flag_choice = input("Do you want to continue y/n: ")
+    if flag_choice == "n":
+        flag = False
