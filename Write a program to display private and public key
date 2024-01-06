@@ -1,0 +1,25 @@
+from Crypto.PublicKey import RSA
+
+def generate_key_pair():
+    # Generate an RSA key pair
+    key = RSA.generate(2048)
+
+    # Get the public key in PEM format
+    public_key = key.publickey().export_key('PEM').decode('utf-8')
+
+    # Get the private key in PEM format
+    private_key = key.export_key('PEM').decode('utf-8')
+
+    return public_key, private_key
+
+def main():
+    # Generate key pair
+    public_key, private_key = generate_key_pair()
+
+    # Display the keys
+    print("Public Key:\n", public_key)
+    print("\nPrivate Key:\n", private_key)
+
+if __name__ == "__main__":
+    main()
+
