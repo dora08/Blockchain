@@ -1,0 +1,32 @@
+import hashlib
+import random
+import datetime
+class Block:
+    def __init__(self, data):
+        self.data = str(data)
+        self.nonce = random.randint(10000, 99999)
+        self.previous_hash = Zero_hash
+        self.hash = None
+        self.hash = hashlib.sha256((self.data + str(self.nonce)).encode())
+        self.hash = self.hash.hexdigest()
+        self.timestamp = datetime.datetime.now()
+        print("Block Data: {}".format(self.data))
+        print("Block Nonce: {}".format(self.nonce))
+        print("Block Hashcode: {}".format(self.hash))
+        print("TimeStamp: {}".format(self.timestamp))
+        print("Previous hash: {}".format(self.previous_hash))
+        print("\n")
+    def getHash(self):
+        hash = hashlib.sha256((self.data + str(self.nonce)).encode())
+        hash = hash.hexdigest()
+        return hash
+    def getNonce(self):
+        return self.nonce
+    def getTimestamp(self):
+        return self.timestamp
+Zero_hash = []
+for x in range(64):
+    Zero_hash.append("0")
+Zero_hash = str("".join(Zero_hash))
+B1 = Block(input("Enter data:"))
+
