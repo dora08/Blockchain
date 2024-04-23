@@ -1,3 +1,10 @@
+A modifier in Solidity is a special function that can be used to modify the behavior of other functions within the same contract. It allows you to enforce certain conditions or perform checks before executing a function. Modifiers are commonly used for access control, input validation, or to add additional functionality to functions without duplicating code.
+
+Owner restrictions using a modifier is a common pattern in Solidity for restricting access to certain functions to only the contract owner. This is achieved by defining a modifier that checks whether the caller of a function is the owner of the contract. If the condition is met, the function proceeds as usual; otherwise, the function call is reverted.
+
+
+
+
 //Solidity - Owner Restriction using Modifier
 
 pragma solidity >0.4.22 <0.6.0;
