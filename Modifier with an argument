@@ -1,3 +1,11 @@
+A modifier in Solidity is a special type of function that can be used to modify the behavior of other functions in a smart contract. When a function is marked with a modifier, the modifier's code is executed before the function's code. Modifiers are often used to enforce access control, validate inputs, or perform other checks before executing a function.
+
+A modifier with an argument is a modifier that accepts parameters. These parameters can be used to customize the behavior of the modifier or to pass information from the calling function to the modifier. This allows for more flexible and reusable modifier implementations, as the same modifier can be applied to multiple functions with different arguments. Modifiers with arguments are useful for implementing conditional checks or enforcing specific conditions based on dynamic factors within a smart contract.
+
+
+
+
+
 pragma solidity >=0.4.22 <0.7.0;
 contract modifierWithArg {
       
