@@ -1,3 +1,6 @@
+"Set" and "get" are common operations in programming that refer to storing and retrieving data. In the context of a smart contract to set and get a message, it means writing a piece of information (a message) to the blockchain and then being able to retrieve that information later.
+
+
 pragma solidity ^0.5.17;
 
 contract Message {
