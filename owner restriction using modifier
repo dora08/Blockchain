@@ -1,0 +1,31 @@
+//Solidity - Owner Restriction using Modifier
+
+pragma solidity >0.4.22 <0.6.0;
+
+contract my_contract{
+
+address public owner;
+string public name;
+int public age;
+
+constructor() public{
+owner = msg.sender;
+}
+
+modifier restrict{
+require(owner == msg.sender);
+_;
+}
+
+function executedby() public view returns(address){
+return msg.sender;
+}
+
+function setName(string memory newName) public restrict{
+name = newName;
+}
+
+function setAge(int newAge) public{
+age = newAge;
+}
+}
