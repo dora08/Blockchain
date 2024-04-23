@@ -1,3 +1,19 @@
+A hash is a function that converts input data into a fixed-size string of characters, typically for security or efficiency purposes. It's commonly used in cryptography for data integrity verification and password storage. Hash functions are designed to be fast to compute and irreversible, meaning it's difficult to reverse-engineer the original input from the hash value. They're essential for tasks like digital signatures and blockchain technology.
+1. **MD5 (Message Digest Algorithm 5)**:
+   - Produces a 128-bit hash value.
+   - Vulnerable to collision attacks.
+   - Widely used but not secure for cryptographic purposes.
+2. **SHA-1 (Secure Hash Algorithm 1)**:
+   - Generates a 160-bit hash value.
+   - Vulnerable to collision attacks.
+   - Deprecated for most cryptographic applications.
+3. **SHA-224 (Secure Hash Algorithm 224)**:
+   - Produces a 224-bit hash value.
+   - Part of the SHA-2 family.
+   - Offers longer hash output compared to SHA-1, but less commonly used than stronger variants like SHA-256.
+
+
+
 import hashlib
 
 flag = True
