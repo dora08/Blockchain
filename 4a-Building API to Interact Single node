@@ -9,14 +9,12 @@ import json
 from flask import Flask, jsonify, request
 from uuid import uuid4
 from urllib.parse import urlparse
-
 class Blockchain:
     def __init__(self):
         self.chain = []
         self.transactions = []
         self.create_block(proof=1, previous_hash=0)
         self.nodes = set()
-
     def create_block(self, proof, previous_hash):
         block = {
             'index': len(self.chain) + 1,
@@ -31,7 +29,6 @@ class Blockchain:
 
     def get_previous_block(self):
         return self.chain[-1]
-
     def proof_of_work(self, previous_proof):
         new_proof = 1
         check_proof = False
@@ -42,11 +39,9 @@ class Blockchain:
             else:
                 new_proof += 1
         return new_proof
-
     def hash(self, block):
         encoded_block = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(encoded_block).hexdigest()
-
     def is_chain_valid(self, chain):
         previous_block = chain[0]
         block_index = 1
@@ -62,17 +57,14 @@ class Blockchain:
             previous_block = block
             block_index += 1
         return True
-
     def add_transaction(self, sender, receiver, amount):
         self.transactions.append({'sender': sender,
                                   'receiver': receiver,
                                   'amount': amount})
         previous_block = self.get_previous_block()
         return previous_block['index'] + 1
-
 app = Flask(__name__)
 blockchain = Blockchain()
-
 @app.route('/mine_block', methods=['GET'])
 def mine_block():
     previous_block = blockchain.get_previous_block()
@@ -86,12 +78,10 @@ def mine_block():
                 'proof': block['proof'],
                 'previous_hash': block['previous_hash']}
     return jsonify(response), 200
-
 @app.route('/get_chain', methods=['GET'])
 def get_chain():
     response = {'chain': blockchain.chain, 'length': len(blockchain.chain)}
     return jsonify(response), 200
-
 @app.route('/is_valid', methods=['GET'])
 def is_valid():
     is_valid = blockchain.is_chain_valid(blockchain.chain)
@@ -100,7 +90,6 @@ def is_valid():
     else:
         response = {'message': 'Your chain is not valid'}
     return jsonify(response), 200
-
 @app.route('/add_transaction', methods=['POST'])
 def add_transaction():
     json_data = request.get_json()
@@ -112,7 +101,6 @@ def add_transaction():
                                        json_data['amount'])
     response = {'Message': f'The transaction is added to block {index}'}
     return jsonify(response), 201
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
 
