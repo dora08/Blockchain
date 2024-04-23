@@ -1,0 +1,50 @@
+//Solidity - CRUD updated
+
+pragma solidity >0.4.22 <0.6.0;
+
+contract crud{
+
+struct User{
+uint id;
+string name;
+string email;
+}
+
+User[] user;
+uint nexid;
+
+function create(string memory name,string memory email) public{
+user.push(User(nexid,name,email));
+nexid++;
+}
+
+function read(uint ids) public view returns(uint,string memory,string memory){
+uint i = find(ids);
+return(user[i].id , user[i].name , user[i].email);
+}
+
+function update(uint ids, string memory name, string memory email) public{
+uint i = find(ids);
+user[i].name = name;
+user[i].email = email;
+}
+
+function destroy(uint ids) public{
+uint i = find(ids);
+delete user[i];
+}
+
+function find(uint id) internal view returns(uint){
+for (uint i = 0; i < user.length; i++){
+if (user[i].id == id){
+return i;
+}
+}
+revert('User is not existing');
+}
+}
+
+
+
+create : name -salman   email :salman@123
+read : 1 
