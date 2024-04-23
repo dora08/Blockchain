@@ -1,3 +1,7 @@
+In asymmetric cryptography, each participant has a pair of keys: a public key and a private key. The private key is kept secret and known only to its owner, while the public key can be freely distributed. When someone wants to send an encrypted message to a recipient, they use the recipient's public key to encrypt the message. Only the recipient, with their corresponding private key, can decrypt and access the original message. This setup ensures secure communication and authentication without the need to share sensitive information like passwords.
+
+
+
 from Crypto.PublicKey import RSA
 
 def generate_key_pair():
