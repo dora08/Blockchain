@@ -1,1 +1,14 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.17;
 
+contract PerfectNumberChecker {
+    function isPerfectNumber(uint256 num) public pure returns (bool) {
+        uint256 sumOfDivisors = 0;
+        for (uint256 i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sumOfDivisors += i;
+            }
+        }
+        return sumOfDivisors == num;
+    }
+}
