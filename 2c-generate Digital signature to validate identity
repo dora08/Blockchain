@@ -1,3 +1,8 @@
+A digital signature is a cryptographic technique used to validate the authenticity and integrity of digital messages or documents. It involves creating a unique identifier for a message using a private key, which can only be decrypted using a corresponding public key. This identifier, known as the digital signature, ensures that the message hasn't been tampered with and confirms the identity of the sender. It's akin to a handwritten signature in the digital realm, providing assurance of both the message's origin and its contents.
+
+
+
+
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
