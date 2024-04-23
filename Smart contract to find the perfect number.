@@ -1,3 +1,7 @@
+Smart contracts are self-executing agreements written in code, often using Solidity for Ethereum. Advantages include trust, transparency, and cost-effectiveness, but they can be vulnerable to bugs, irreversible, and dependent on blockchain performance. Uses in Solidity include tokenization, DeFi, supply chain management, identity verification, and real estate.
+Sure! A perfect number is a special kind of whole number where if you add up all its smaller factors (excluding itself), you get the number itself. For example, 6 is a perfect number because 1 + 2 + 3 equals 6. It's like a number that fits together perfectly with its smaller parts.
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.5.17;
 
