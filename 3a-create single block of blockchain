@@ -1,9 +1,10 @@
 A single block in a blockchain is a data structure that contains information and a reference to the previous block. It typically includes three main components:
 
-Block Header: Contains metadata such as a timestamp, a reference to the previous block (known as the hash pointer), and other relevant information.
-Transactions: Holds a set of transactions, which are records of data exchanges or operations that occurred since the previous block was created.
-Block Hash: A cryptographic hash of the block's header and transactions. This hash serves as a unique identifier for the block and ensures its integrity.
-
+- Block Data: Information stored within a block, typically including transaction data in blockchain systems, representing the content or payload of the block.
+- Block Nonce: A number added to a block during mining in blockchain, varied to find a hash that meets the difficulty target, crucial for ensuring the integrity and security of the blockchain network.
+- Block Hashcode: A cryptographic hash function applied to a block's data, generating a unique identifier for the block, essential for maintaining the integrity and immutability of the blockchain.
+- Timestamp: A record of the time when a block is created, aiding in establishing the chronological order of blocks in a blockchain, crucial for ensuring the integrity and validity of transactions.
+- Previous Hash: A reference to the hashcode of the preceding block in a blockchain, linking blocks together, forming a chain, and providing a tamper-evident record of transaction history.
 
 
 import hashlib
