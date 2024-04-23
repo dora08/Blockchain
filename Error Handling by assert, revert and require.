@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >0.4.0 <0.6.0;
+
+contract ErrorHandlingExample {
+    uint256 public value;
+
+    // Function to set the value, using require for input validation
+    function setValue(uint256 _newValue) public {
+        require(_newValue != 0, "Input value must not be zero");
+        value = _newValue;
+    }
+
+    // Function to double the value, using assert for internal consistency check
+    function doubleValue() public {
+        uint256 oldValue = value;
+        value *= 2;
+        assert(value >= oldValue); // Ensure value doesn't overflow
+    }
+
+    // Function to decrement the value, using revert to revert the transaction on failure
+    function decrementValue(uint256 _amount) public {
+        require(_amount <= value, "Insufficient value to decrement");
+        value -= _amount;
+        if (value == 0) {
+            revert("Value cannot be zero"); // Revert with custom error message
+        }
+    }
+}
+
+
+
+remix vm shanghai 
+first value 0 tak
