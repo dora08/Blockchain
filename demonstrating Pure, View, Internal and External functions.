@@ -1,3 +1,10 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+Absolutely:
+- **Pure Functions**: These functions are like mathematical functions; they take input parameters and return an output based solely on those inputs. They do not read or modify the contract's state or any other data from outside the function scope. Pure functions are useful for calculations where the result depends only on the provided inputs and not on any external factors.
+- **View Functions**: These functions are similar to pure functions but can read data from the contract's state. They are read-only functions and do not modify the state. View functions are used when you need to retrieve data from the blockchain but don't want to change anything in the process.
+- **Internal Functions**: Internal functions can only be accessed from within the contract or contracts that inherit from it. They are not accessible externally, meaning other contracts or transactions cannot call them directly. Internal functions are typically used for helper functions or internal logic that doesn't need to be exposed to external parties.
+- **External Functions**: These functions are accessible externally, meaning they can be called from outside the contract, typically by other contracts or transactions. They can also be called internally by the contract itself. External functions are often used to expose the contract's functionality to the outside world, such as allowing users to interact with the contract's features.
+
 // SPDX-License-Identifier: MIT
 pragma solidity >0.4.0 <0.6.0;
 
