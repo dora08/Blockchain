@@ -1,0 +1,45 @@
+//Solidity: - References [Array & Mapping]
+pragma solidity >0.4.22 <0.6.0;
+
+contract abc{
+
+mapping(uint => string) details;
+
+function updateDetails(uint id,string memory name) public{
+details[id] = name;
+}
+
+function getDetails(uint id) public view returns(string memory){
+return details[id];
+}
+}
+contract testArray{
+
+uint[] myArray;
+
+uint[4] arr = [6,8,5,8];
+
+function Test(uint x) public{
+myArray.push(x);
+}
+
+function fixedTest(uint) public view returns(uint[4] memory){
+return arr;
+
+
+
+id:298
+name:akshay
+
+
+get details : 298
+}
+
+function getArray() public view returns(uint[] memory){
+return myArray;
+}
+
+function getLength() public view returns(uint){
+return myArray.length;
+}
+}
