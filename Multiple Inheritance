@@ -1,3 +1,10 @@
+Inheritance in Solidity refers to a mechanism where a contract can inherit properties and functions from another contract. This allows for code reuse and the creation of hierarchical relationships between contracts. When a contract inherits from another, it gains access to all the state variables and functions defined in the parent contract. Inheritance simplifies smart contract development, promotes code organization, and enhances code readability.
+
+Multiple inheritance, on the other hand, occurs when a contract inherits from more than one parent contract. This means that a single child contract can inherit properties and functions from multiple parent contracts simultaneously. Multiple inheritance enables even greater code reuse and flexibility in smart contract development by allowing contracts to combine features from different sources. However, developers should exercise caution when using multiple inheritance to avoid potential complications such as ambiguous function calls or complex inheritance hierarchies, which can make code maintenance more challenging.
+
+
+
+
 pragma solidity >0.4.0 <0.6.0;
 
 contract Contract_A{
