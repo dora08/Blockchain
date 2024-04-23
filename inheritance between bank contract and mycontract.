@@ -1,3 +1,23 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+Certainly:
+1. **Inheritance**:
+   - **Definition**: Inheritance in Solidity enables one contract to inherit properties and methods from another, promoting code reuse and modularity.
+   - **Usage**: It allows contracts to extend existing functionalities and customize behavior without duplicating code.
+   - **Example**: A contract inheriting from another can access its functions and variables, enhancing efficiency and simplifying contract development.
+2. **Bank Contract**:
+   - **Purpose**: The Bank contract serves as a template for common banking operations like deposits, withdrawals, and balance inquiries.
+   - **Implementation**: It includes functions such as `deposit`, `withdraw`, and `getBalance` to manage user accounts and balances.
+   - **Example**: Users interact with the Bank contract to perform banking transactions, leveraging its predefined functionalities.
+3. **MyContract**:
+   - **Purpose**: MyContract is a custom contract that inherits functionalities from Bank and adds additional features specific to its use case.
+   - **Implementation**: By inheriting from Bank, MyContract gains access to its functions and variables, which it can extend or override.
+   - **Example**: MyContract could be a loan management contract, inheriting banking functionalities and introducing loan-related operations like issuing loans and managing repayments.
+4. **Benefits**:
+   - **Code Reusability**: Inheritance promotes reuse of existing code, reducing redundancy and development time.
+   - **Modularity**: It enables separation of concerns by encapsulating related functionalities into separate contracts.
+   - **Customization**: Contracts like MyContract can customize inherited functionalities to suit specific requirements, enhancing flexibility and maintainability.
+
+
 pragma solidity >0.4.0 <0.6.0;
 contract Bank{
 int value;
