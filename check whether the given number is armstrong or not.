@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.17;
+
+contract ArmstrongNumberChecker {
+    function isArmstrongNumber(uint256 num) public pure returns (bool) {
+        uint256 originalNum = num;
+        uint256 numOfDigits = 0;
+        uint256 sum = 0;
+        
+        // Count number of digits
+        while (originalNum != 0) {
+            originalNum /= 10;
+            numOfDigits++;
+        }
+        
+        originalNum = num;
+        
+        // Calculate the sum of the nth power of each digit
+        while (originalNum != 0) {
+            uint256 digit = originalNum % 10;
+            sum += digit ** numOfDigits;
+            originalNum /= 10;
+        }
+        
+        return sum == num;
+    }
+}
+
