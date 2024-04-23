@@ -1,3 +1,6 @@
+Multiple blocks in a blockchain context refer to a series of interconnected data structures, where each block contains a set of transactions or data. These blocks are linked together in a chain, forming the blockchain.
+
+
 import hashlib
 import datetime
 import random
