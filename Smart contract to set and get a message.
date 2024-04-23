@@ -1,5 +1,5 @@
 "Set" and "get" are common operations in programming that refer to storing and retrieving data. In the context of a smart contract to set and get a message, it means writing a piece of information (a message) to the blockchain and then being able to retrieve that information later.
-
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
 
 pragma solidity ^0.5.17;
 
