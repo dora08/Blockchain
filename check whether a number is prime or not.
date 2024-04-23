@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.17;
+
+contract PrimeNumberChecker {
+    // State variable to store the result
+    string public result;
+    // Function to check if a number is prime
+    function isPrime(uint256 number) public {
+        if (number <= 1) {
+            result = "Not Prime";
+            return;
+        }
+        if (number == 2) {
+            result = "Prime";
+            return;
+        }
+        if (number % 2 == 0) {
+            result = "Not Prime";
+            return;
+        }
+        for (uint256 i = 3; i * i <= number; i += 2) {
+            if (number % i == 0) {
+                result = "Not Prime";
+                return;
+            }
+        }
+        result = "Prime";
+    }
+}
+
