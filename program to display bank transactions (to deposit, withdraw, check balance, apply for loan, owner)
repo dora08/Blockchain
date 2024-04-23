@@ -1,1 +1,70 @@
+// Complete solidity Bank Contract
+
+pragma solidity >0.4.22 <0.6.0;
+
+//Define a logic that only owner can withdraw or check the balance of his account
+
+//Define a logic that bank can deny the transaction without exception if withdrawal
+//amount is more then the balance
+
+//Define a logic to add some default balance when a new consumer is deploying a contract
+
+contract Bank{
+uint256 private value;
+address public owner;
+
+constructor(uint256 amount) public{
+owner = msg.sender;
+value = amount;
+}
+
+modifier ownerfunc{
+require(owner == msg.sender);
+_;
+}
+
+function check(uint256 amount) view  internal ownerfunc returns(bool){
+return value >= amount;
+}
+
+function deposit(uint256 amount) public{
+value += amount;
+}
+
+function checkBalance() public view ownerfunc returns(uint256){
+return value;
+}
+
+function withdraw(uint256 amount) public ownerfunc{
+if (check(amount)){
+value -= amount;
+}
+}
+
+function loan() public view returns(bool){
+return value >= 100000;
+}
+}
+
+contract myContract is Bank(0){
+
+string name;
+uint age;
+
+function setName(string memory newName) public ownerfunc{
+name = newName;
+}
+
+function setAge(uint newAge) public ownerfunc{
+age = newAge;
+}
+
+function getName() public view returns(string memory){
+return name;
+}
+
+function getAge() public view returns(uint){
+return age;
+}
+}
 
