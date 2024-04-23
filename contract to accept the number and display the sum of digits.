@@ -1,3 +1,6 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.5.17;
 contract SumOfDigits {
