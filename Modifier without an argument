@@ -1,3 +1,8 @@
+A modifier in Solidity is a special type of function that can be used to modify the behavior of other functions in a smart contract. When a function is marked with a modifier, the modifier's code is executed before the function's code. Modifiers are often used to enforce access control, validate inputs, or perform other checks before executing a function.
+A modifier without an argument is a special function in Solidity that can alter the behavior of other functions within the same contract without taking any parameters. It is typically used to enforce certain conditions or perform checks before executing a function. For example, a modifier without an argument might be used to restrict access to certain functions based on the sender's address or to ensure that certain conditions are met before allowing the execution of a function. Modifiers without arguments are concise and reusable, making them valuable for enforcing common rules across multiple functions within a contract.
+
+
+
 pragma solidity >=0.4.22 <0.7.0;
 
 contract modifierWithoutArg {
