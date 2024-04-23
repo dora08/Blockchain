@@ -1,3 +1,7 @@
+Generating a chain of blocks with one transaction per block involves miners adding individual transactions to blocks, solving cryptographic puzzles to validate them, and extending the chain by linking new blocks to the existing chain.
+
+
+
 import hashlib
 from datetime import datetime
 import random
