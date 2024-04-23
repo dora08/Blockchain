@@ -22,3 +22,4 @@ contract Contract_B is Contract_A(22){
 
 
 select contract B at contract
+remix vm shanghai
