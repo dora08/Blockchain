@@ -1,1 +1,23 @@
+//Solidity-Create Library
+
+pragma solidity >0.4.22 <0.6.0;
+
+library xyz{
+
+function increment(uint val) public pure returns(uint){
+return val+1;
+}
+
+function decrement(uint val) public pure returns(uint){
+return val-1;
+}
+
+function incrementbyValue(uint val, uint x) public pure returns(uint){
+return val+x;
+}
+
+function decrementbyValue(uint val, uint x) public pure returns(uint){
+return val-x;
+}
+}
 
