@@ -1,3 +1,20 @@
+Single inheritance is a feature in object-oriented programming where a class can inherit attributes and methods from only one parent class. This means that a subclass can extend the functionality of a single superclass, forming a hierarchical relationship between the two classes. In single inheritance, each class in the hierarchy has at most one immediate parent class, leading to a linear structure of class relationships. This approach simplifies the class hierarchy and promotes code reuse by allowing subclasses to inherit and extend the functionality of a single parent class.
+**Single Inheritance**:
+
+**Advantages**:
+- Simplifies class hierarchy
+- Promotes code reusability
+- Supports encapsulation
+**Disadvantages**:
+- Limited flexibility
+- Hierarchical constraints
+- Potential diamond problem
+**Uses**:
+- Commonly used in languages like Java and C++
+- Suitable for linear class relationships
+- Important for code reusability and encapsulation
+
+
 pragma solidity >0.4.0 <0.6.0;
 
 contract Contract_A {
