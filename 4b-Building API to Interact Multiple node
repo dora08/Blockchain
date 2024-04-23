@@ -1,3 +1,6 @@
+Building an API to interact with multiple nodes typically involves creating a system that allows communication between different computing entities, often referred to as nodes. These nodes could be servers, devices, or any other computational units within a network
+
+
 Blockchain1.py
 import datetime
 import hashlib
