@@ -1,0 +1,9 @@
+Block chain Implementation
+--->Program to create a single block of blockchain.
+---> Program to generate a chain of blocks containing One transaction per Block.
+---> Program to implement Merkle Tree containing multiple transactions per Block.
+
+
+Program to implement Block Mining.
+--->Building API to Interact Single node 
+--->b) Building API to Interact Multiple node
