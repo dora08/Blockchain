@@ -1,3 +1,9 @@
+Inheritance in Solidity allows one contract to inherit properties and functions from another contract, enabling code reuse and creating hierarchical relationships between contracts. When a contract inherits from another, it gains access to all the state variables and functions defined in the parent contract. This inheritance mechanism facilitates modularization, improves code readability, and reduces redundancy in smart contract development.
+
+Multilevel inheritance is a type of inheritance where a contract inherits from another contract, which itself may inherit from yet another contract, forming a chain or hierarchy of inheritance. In multilevel inheritance, each contract in the hierarchy gains access to properties and functions defined in its parent contract(s), as well as its own. This allows for complex relationships and structures within smart contracts, enabling developers to build upon existing functionality in a modular and organized manner. However, developers should be mindful of the potential complexities and risks associated with deep inheritance hierarchies, such as increased gas costs and potential security vulnerabilities.
+
+
+
 pragma solidity >0.4.0 <0.6.0;
 
 contract Contract_A {
