@@ -1,5 +1,10 @@
 Generating a chain of blocks with one transaction per block involves miners adding individual transactions to blocks, solving cryptographic puzzles to validate them, and extending the chain by linking new blocks to the existing chain.
-
+- Block ID: A unique identifier assigned to a block within a blockchain, allowing for easy reference and identification of specific blocks.
+- Timestamp: A record of the exact time when a block is created, ensuring the chronological order of blocks and providing a temporal reference for transactions.
+- Nonce: A random number added to a block during mining, adjusted to satisfy the proof-of-work requirement, essential for achieving consensus and maintaining blockchain security.
+- Previous Hash: The cryptographic hash of the preceding block in the blockchain, linking blocks together and forming an immutable chain of transaction history.
+- Transactions: Data representing actions or exchanges of value recorded within a block, such as cryptocurrency transfers or smart contract executions, forming the basis of blockchain functionality.
+- Merkle Root: A cryptographic hash generated from the hashes of all transactions in a block, serving as a unique identifier for the entire set of transactions, ensuring integrity and efficiency in block verification.
 
 
 import hashlib
