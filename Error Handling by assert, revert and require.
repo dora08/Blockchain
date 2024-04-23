@@ -30,4 +30,13 @@ contract ErrorHandlingExample {
 
 
 remix vm shanghai 
+
+
+1)When user enters zero value
 first value 0 tak
+
+
+
+2)	when user enters the value beyond amount
+first value 10
+second value 20
