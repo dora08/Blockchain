@@ -28,3 +28,6 @@ contract modifierWithoutArg {
    e.age = _empage;
  }
 }
+
+
+op on rhs
