@@ -1,3 +1,10 @@
+Error handling is crucial in Solidity to ensure smart contracts behave as expected and handle unexpected situations gracefully. Solidity provides three main mechanisms for error handling: assert, revert, and require
+Assert: Used for internal consistency checks. If a condition evaluates to false, it indicates a critical error or bug, and the transaction is reverted.
+Revert: Halts execution and reverts state changes in response to conditions. Typically used for validation errors or user input errors.
+Require: Similar to revert but primarily used for input validation or enforcing preconditions before executing the rest of the function. If the condition fails, the transaction is reverted.
+
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity >0.4.0 <0.6.0;
 
