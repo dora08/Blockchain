@@ -33,4 +33,14 @@ contract FunctionModifiersExample {
 
 remix VM Shanghai
 unction modifier contract 
+
+1)	Showing statevariable (as declared in code)
 just click allll buttons dont write anything else
+
+2)	Showing statevariable after decrement
+
+
+3)	Showing statevariable after increment
+
+
+
