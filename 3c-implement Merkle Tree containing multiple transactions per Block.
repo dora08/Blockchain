@@ -1,3 +1,6 @@
+A Merkle tree is a cryptographic data structure where each leaf node is labeled with the cryptographic hash of a data block. These hashes are then recursively hashed pairwise up the tree until a single hash, known as the root hash, is obtained. It ensures data integrity and efficient verification as any change in the data would require altering multiple hashes, making tampering easily detectable. Merkle trees are commonly used in blockchain technology for efficient verification of large datasets with minimal computational resources.
+
+
 import hashlib
 from datetime import datetime
 import random
