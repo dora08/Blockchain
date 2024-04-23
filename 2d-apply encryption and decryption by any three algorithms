@@ -1,17 +1,21 @@
 Encryption:
 Encryption is the process of converting plain text or data into an unreadable format called ciphertext using an encryption algorithm and a key.
 It ensures data confidentiality by making it difficult for unauthorized parties to understand the original message without the appropriate decryption key.
+
 Decryption:
 Decryption is the reverse process of encryption; it involves converting ciphertext back into its original plaintext form using a decryption algorithm and the correct decryption key.
 Decryption allows authorized parties to recover the original message and understand its contents.
+
 AES (Advanced Encryption Standard):
 AES is a symmetric encryption algorithm widely adopted for securing sensitive data.
 It operates on fixed-size blocks of data (128 bits) and uses keys of various lengths (128, 192, or 256 bits).
 AES is known for its efficiency, security, and resistance to various cryptographic attacks.
+
 DES (Data Encryption Standard):
 DES is an older symmetric encryption algorithm developed in the 1970s by IBM.
 It operates on 64-bit blocks of data and uses a 56-bit key.
 DES has become less secure over time due to advances in technology, and it's generally replaced by AES in modern applications.
+
 RSA (Rivest-Shamir-Adleman):
 RSA is an asymmetric encryption algorithm used for secure communication and digital signatures.
 It involves generating a key pair consisting of a public key and a private key.
