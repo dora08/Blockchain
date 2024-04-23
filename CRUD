@@ -1,3 +1,7 @@
+Sure! "CRUD" stands for Create, Read, Update, and Delete - basic operations for managing data. In Solidity, it means implementing these operations within smart contracts on the Ethereum blockchain. For example, creating functions to add, retrieve, update, and "delete" data (usually by marking it as inactive). It's essential for building decentralized applications (DApps) with data management capabilities.
+
+
+
 //Solidity - CRUD updated
 
 pragma solidity >0.4.22 <0.6.0;
