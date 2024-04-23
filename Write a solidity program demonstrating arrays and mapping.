@@ -1,3 +1,11 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+Arrays in Solidity are collections of elements of the same type, stored in contiguous memory. They can be of fixed or dynamic length and are accessed by index. Arrays are commonly used to store lists of data.
+
+Mappings are key-value pairs where each value is associated with a unique key. They provide efficient access to values based on their keys. Mappings are often used for storing data that needs to be quickly retrieved based on a specific identifier, such as addresses or IDs.
+
+
+
+
 //Solidity: - References [Array & Mapping]
 pragma solidity >0.4.22 <0.6.0;
 
