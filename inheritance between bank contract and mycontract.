@@ -1,0 +1,29 @@
+pragma solidity >0.4.0 <0.6.0;
+contract Bank{
+int value;
+constructor(int amount) public{
+value = amount;
+}
+function balance() public view returns(int){
+return value;
+}
+}
+contract mycontract is Bank(38){
+string name;
+int age;
+function setName(string memory newName) public{
+name = newName;
+}
+function getName() public view returns(string memory){
+return name;
+}
+function setAge(int newAge) public{
+age = newAge;
+}
+}
+
+
+remix vm shanghai
+bank-contract
+100 or anything in front of deploy
+edd c4
