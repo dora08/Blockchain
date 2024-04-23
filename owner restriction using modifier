@@ -1,3 +1,11 @@
+Modifiers in Solidity are special functions used to modify the behavior of other functions. They are often employed to enforce conditions or access controls before executing the main logic of a function. One common use of modifiers is to restrict access to certain functions based on specific conditions, such as requiring that the caller of a function possesses certain permissions or meets particular criteria.
+
+Owner restriction, a type of modifier, limits access to certain functions to the owner of a contract. This means that only the address that deployed the contract can execute functions modified with the "onlyOwner" modifier. It's a fundamental security measure, ensuring that critical operations or administrative tasks can only be performed by an authorized party, typically the creator or administrator of the contract. This restriction helps safeguard against unauthorized modifications or misuse of the contract's functionality.
+
+
+
+
+
 //Solidity - Owner Restriction using Modifier
 
 pragma solidity >0.4.22 <0.6.0;
