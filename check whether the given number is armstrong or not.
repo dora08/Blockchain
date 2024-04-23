@@ -1,3 +1,21 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+An Armstrong number (also known as a narcissistic number, plenary number, or pluperfect number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits. For example, if we take the number 153:
+
+1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+
+So, 153 is an Armstrong number because it equals the sum of its digits raised to the power of the number of digits (in this case, 3).
+
+In general, to determine if a number is an Armstrong number:
+1. Count the number of digits in the number.
+2. Raise each digit to the power of the total number of digits.
+3. Add up the results.
+4. If the sum equals the original number, then it's an Armstrong number; otherwise, it's not.
+
+For instance, 371 is an Armstrong number because:
+
+3^3 + 7^3 + 1^3 = 27 + 343 + 1 = 371
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.5.17;
 
