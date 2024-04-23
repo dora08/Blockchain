@@ -1,0 +1,24 @@
+pragma solidity >0.4.0 <0.6.0;
+
+contract Contract_A {
+    
+    uint256 value;
+    constructor (uint256 n) public {
+        value = n;
+    }
+    
+    function incrementValue(uint256 x) public {
+        value += x;
+    }
+}
+
+contract Contract_B is Contract_A(22){
+    
+    function getValue() public view returns(uint256) {
+        return value;
+    }
+}
+
+
+
+select contract B at contract
