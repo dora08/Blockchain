@@ -1,3 +1,10 @@
+Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller directly written into code. They run on a blockchain network, ensuring transparency, security, and immutability. Solidity is a popular programming language used to write smart contracts, particularly on the Ethereum blockchain.
+Increment and decrement are operations used to increase or decrease the value of a variable by a certain amount.
+- **Increment**: Incrementing a value means increasing it by a certain amount, typically by 1. For example, if you have a variable `x` and you increment it by 1, you would write `x = x + 1` or `x++`.
+- **Decrement**: Decrementing a value means decreasing it by a certain amount, usually by 1. For example, if you have a variable `y` and you decrement it by 1, you would write `y = y - 1` or `y--`.
+These operations are commonly used in programming to modify the value of variables, for example in loops or to keep track of counts.
+
+
 //Solidity-Create Library
 
 pragma solidity >0.4.22 <0.6.0;
