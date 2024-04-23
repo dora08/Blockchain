@@ -1,0 +1,98 @@
+CRUD stands for Create, Read, Update, and Delete, representing the four basic functions for managing data in a system:
+- Create: Involves adding new data entities to a system, such as creating new records or entries.
+- Read: Involves retrieving or accessing existing data from the system, allowing users to view or retrieve information.
+- Update: Involves modifying existing data in the system, allowing users to make changes or updates to data entities.
+- Delete: Involves removing existing data from the system, allowing users to delete records or entries they no longer need.
+These operations are fundamental to database management systems and are often implemented in various software applications to enable effective data management and manipulation.
+
+
+Open Ganache
+New Workspace
+Name and save the Workspace
+You can see the list of Accounts 
+Download the etherwallet zip file.
+Extract Files
+Open Index.html file
+MyEtherWallet will appear
+Add custom Node(right dropdown list)
+Copy RPC server URL(app vr)
+open custom node paste url     name:MathOperation    Port : 7545     Custom Use it
+Success
+Go to Contracts
+Go to Deploy Contracts
+Go to Remix IDE(solidity.ide) and Write the CRUD Smart Contract
+pragma solidity >0.4.0 <0.6.0;
+
+contract crud{
+    
+    struct User{
+        uint id;
+        string name;
+        string email;
+        uint age;
+    }
+    
+    User[] user;
+    uint nexid;
+    
+    function create(string memory name,string memory email,uint age) public{
+        user.push(User(nexid,name,email,age));
+        nexid++;
+    }
+    
+    function read(uint ids) public view returns(uint,string memory,string memory,uint){
+        uint i = find(ids);
+        return (user[i].id , user[i].name , user[i].email , user[i].age);
+    }
+    
+    function update(uint ids,string memory name,string memory email,uint age) public{
+        uint i = find(ids);
+        user[i].name = name;
+        user[i].email = email;
+        user[i].age = age;
+    }
+    
+    function destroy(uint ids) public{
+        uint i = find(ids);
+        delete user[i];
+    }
+    
+  
+  function find(uint ids) internal view returns(uint){
+        for (uint i=0 ; i < user.length ; i++){
+            if (user[i].id == ids){
+                return i;
+            }
+        }
+        revert('User is not Existing');
+    }
+}
+
+Get Bytecode of Contract(4th option)
+Copy bytecode and paste
+Gas Limits appear
+Select Private Key
+Copy private key of any one account
+Paste the Private Key and Unlock
+Sign Transaction
+Deploy Contract
+Verify Contract in Ganache
+Go to interact with Contract
+Copy created Contract address
+Paste the created contract address
+Go to Remix IDE and Copy ABI(same 4 option)
+Paste the ABI
+Access
+Smart Contract Functions
+CRUD operations:-
+1)	Create:-
+Transaction Created
+2)	Read:- 
+3)	Update:-
+4) Delete
+Record No more available
+List of transaction on Ganache
+
+
+Conclusion:
+ CRUD Operations on Ganache: We practiced creating, reading, updating, and deleting (CRUD) operations within a local Ethereum development environment, Ganache. These operations are essential for managing and interacting with contract data.
