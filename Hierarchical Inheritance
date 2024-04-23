@@ -1,3 +1,10 @@
+Hierarchical inheritance in Solidity involves a parent contract that serves as a base for multiple child contracts, forming a hierarchical structure. Child contracts inherit properties and functions from the parent contract, enabling code reuse and organization. Each child contract can further extend the functionality inherited from the parent or implement additional features. This inheritance hierarchy facilitates modularization and simplifies contract maintenance by promoting a structured and organized approach to smart contract development.
+
+
+
+
+
+
 pragma solidity >0.4.0 <0.6.0;
 
 contract Contract_A{
